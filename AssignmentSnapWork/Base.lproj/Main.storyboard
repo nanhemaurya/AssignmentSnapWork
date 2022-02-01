@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AssignmentSnapWork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpe-av-XkE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbQ-M1-eKm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-eU-IOv">
+                                                <rect key="frame" x="172.5" y="49.5" width="69.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ZJu-eU-IOv" secondAttribute="bottom" constant="14" id="Dff-oB-SPx"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZJu-eU-IOv" secondAttribute="trailing" constant="172" id="U7b-b0-s8O"/>
+                                            <constraint firstItem="ZJu-eU-IOv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TbQ-M1-eKm" secondAttribute="leading" id="gmt-dw-W8Q"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="f9S-3K-f6R">
+                                        <rect key="frame" x="12" y="102" width="390" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wn-iT-v0o" userLabel="Select Year">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="60"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc9-0j-tGd" userLabel="Select Month">
+                                                <rect key="frame" x="207" y="0.0" width="183" height="60"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="kIm-n2-idS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VTQ-ft-L5T">
+                                        <rect key="frame" x="0.0" y="174" width="414" height="722"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TbQ-M1-eKm" firstAttribute="leading" secondItem="Zpe-av-XkE" secondAttribute="leading" id="2dr-AG-k7U"/>
+                                    <constraint firstAttribute="trailing" secondItem="TbQ-M1-eKm" secondAttribute="trailing" id="5H6-b5-CeB"/>
+                                    <constraint firstAttribute="trailing" secondItem="f9S-3K-f6R" secondAttribute="trailing" constant="12" id="ATc-OS-gYn"/>
+                                    <constraint firstAttribute="bottom" secondItem="VTQ-ft-L5T" secondAttribute="bottom" id="CXa-gk-31e"/>
+                                    <constraint firstItem="TbQ-M1-eKm" firstAttribute="top" secondItem="Zpe-av-XkE" secondAttribute="top" id="St0-vA-3w4"/>
+                                    <constraint firstItem="VTQ-ft-L5T" firstAttribute="top" secondItem="f9S-3K-f6R" secondAttribute="bottom" constant="12" id="XSX-XD-4AI"/>
+                                    <constraint firstItem="VTQ-ft-L5T" firstAttribute="leading" secondItem="Zpe-av-XkE" secondAttribute="leading" id="aze-UZ-7M6"/>
+                                    <constraint firstItem="f9S-3K-f6R" firstAttribute="top" secondItem="TbQ-M1-eKm" secondAttribute="bottom" constant="12" id="j4H-SG-fTL"/>
+                                    <constraint firstItem="f9S-3K-f6R" firstAttribute="leading" secondItem="Zpe-av-XkE" secondAttribute="leading" constant="12" id="sgx-hk-bpt"/>
+                                    <constraint firstAttribute="trailing" secondItem="VTQ-ft-L5T" secondAttribute="trailing" id="wfj-Il-RR2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZJu-eU-IOv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5.5" id="CmN-Wq-se7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zpe-av-XkE" secondAttribute="trailing" id="Lzb-o4-H2S"/>
+                            <constraint firstItem="Zpe-av-XkE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fZW-9v-xVr"/>
+                            <constraint firstItem="Zpe-av-XkE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gpQ-4l-ctk"/>
+                            <constraint firstAttribute="bottom" secondItem="Zpe-av-XkE" secondAttribute="bottom" id="ouI-Tm-YGM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectMonthLbl" destination="Uc9-0j-tGd" id="jUZ-ay-OU1"/>
+                        <outlet property="selectYearLbl" destination="8Wn-iT-v0o" id="MXh-lN-Te0"/>
+                        <outlet property="tableView" destination="VTQ-ft-L5T" id="o5I-XM-oAx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="46.875"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
